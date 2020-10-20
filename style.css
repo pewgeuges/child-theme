@@ -1,0 +1,401 @@
+/*
+ Theme Name:   Catch Everest Custom
+ Theme URI:    https://blog.dispoclavier.eu/catch-everest-custom/
+ Description:  Catch Everest Custom Theme
+ Author:       dispocla
+ Author URI:   https://dispoclavier.eu
+ Template:     catch-everest
+ Version:      1.1.0
+ License:      GNU General Public License v2 or later
+ License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         responsive-layout, accessibility-ready
+ Text Domain:  catcheverestcustom
+*/
+/*
+ Date:         2020-10-11T0454+0200
+ Build:        34
+               The build number is appended to the WordPress version number 
+               so as to get browsers reload the style sheets, including this one.
+ IMPORTANT:    When parsing this header, WordPress uses the field “Template”
+               as the slug of the parent theme.
+ CAUTION:      For browsers to refresh stylesheets, the WP version number
+               needs to be incremented, e.g. from '5.4.2' to '5.4.2.01'.
+               That may be done in wp-includes/version.php(16), or 
+               more conveniently in the theme’s functions.php (see there).
+ Courtesy:     WordPress 
+               https://developer.wordpress.org/themes/advanced-topics/child-themes/
+*/
+p,
+.footnote_plugin_text,
+h1, h2, h3, h4, h5, h6 {
+	color: #000000; /*was:#404040*/
+}
+a {
+	color: #2255BB;
+}
+.by-author,
+.comments-link,
+.edit-link,
+.sep,
+.copyright {
+	display: none;
+}
+.legal {
+	color: white;
+}
+.separator {
+	color: black;
+}
+.tribute {
+	text-align: center;
+	font-size: 17.5px;
+	font-style: italic;
+}
+
+
+h2.entry-title::before { content: "";	counter-increment: none }
+
+body { counter-reset: h2 }
+h2 { counter-reset: h3 }
+h3 { counter-reset: h4 }
+h4 { counter-reset: h5 }
+h5 { counter-reset: h6 }
+
+h2 a.toc-backlink::before { counter-increment: h2; content: counter(h2) "." }
+h3 a.toc-backlink::before { counter-increment: h3; content: counter(h2) "." counter(h3) "." }
+h4 a.toc-backlink::before { counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) "." }
+h5 a.toc-backlink::before { counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." }
+h6 a.toc-backlink::before { counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) "." }
+
+body.adapter-les-contenus .toc_number::before { content: "1." }
+body.adapter-les-contenus h1::before { content: "1.\2002" }
+body.adapter-les-contenus h2 a.toc-backlink::before { counter-increment: h2; content: "1." counter(h2) "." }
+body.adapter-les-contenus h3 a.toc-backlink::before { counter-increment: h3; content: "1." counter(h2) "." counter(h3) "." }
+body.adapter-les-contenus h4 a.toc-backlink::before { counter-increment: h4; content: "1." counter(h2) "." counter(h3) "." counter(h4) "." }
+body.adapter-les-contenus h5 a.toc-backlink::before { counter-increment: h5; content: "1." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." }
+body.adapter-les-contenus h6 a.toc-backlink::before { counter-increment: h6; content: "1." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) "." }
+
+body.construire-le-site .toc_number::before { content: "2." }
+body.construire-le-site h1::before { content: "2.\2002" }
+body.construire-le-site h2 a.toc-backlink::before { counter-increment: h2; content: "2." counter(h2) "." }
+body.construire-le-site h3 a.toc-backlink::before { counter-increment: h3; content: "2." counter(h2) "." counter(h3) "." }
+body.construire-le-site h4 a.toc-backlink::before { counter-increment: h4; content: "2." counter(h2) "." counter(h3) "." counter(h4) "." }
+body.construire-le-site h5 a.toc-backlink::before { counter-increment: h5; content: "2." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." }
+body.construire-le-site h6 a.toc-backlink::before { counter-increment: h6; content: "2." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) "." }
+
+body.mettre-en-ligne .toc_number::before { content: "3." }
+body.mettre-en-ligne h1::before { content: "3.\2002" }
+body.mettre-en-ligne h2 a.toc-backlink::before { counter-increment: h2; content: "3." counter(h2) "." }
+body.mettre-en-ligne h3 a.toc-backlink::before { counter-increment: h3; content: "3." counter(h2) "." counter(h3) "." }
+body.mettre-en-ligne h4 a.toc-backlink::before { counter-increment: h4; content: "3." counter(h2) "." counter(h3) "." counter(h4) "." }
+body.mettre-en-ligne h5 a.toc-backlink::before { counter-increment: h5; content: "3." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." }
+body.mettre-en-ligne h6 a.toc-backlink::before { counter-increment: h6; content: "3." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) "." }
+
+p,
+td,
+li {
+	hyphens: none;
+}
+.in {
+	font-size: 120%;
+}
+.ab {
+	margin-left: 4%;
+	font-size: 120%;
+	font-style: italic;
+}
+.entry-content {
+	margin-top: 42px;
+}
+code {
+	white-space: pre-wrap;
+}
+h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+.center {
+	text-align: center;
+}
+pre,
+.wp-block-preformatted {
+	white-space: pre;
+	overflow: auto;
+	border: 1px solid #888888;
+	font-family: Consolas, monospace;
+	background: white;
+}
+.co {
+	overflow: auto;
+	padding-left: 10px;
+	font-family: Consolas, monospace;
+	border: 1px solid #AAAAAA;
+}
+.att {
+	border: 3px solid red;
+	padding: 4% 4% 4% 6%;
+	color: red;
+	page-break-inside: avoid;
+}
+.att::before {
+	font-size: 140%;
+	content: "⚠ ";
+}
+.att::first-line {
+	margin-left: -30px;
+}
+
+/* 2020-06-07T0812+0200 */
+#header-menu ul.menu a,
+article .entry-format {
+	text-transform: none;
+}
+.home .entry-title {
+	display: none;
+}
+.post-last-modified {
+	font-size: 17.5px;
+	font-family: sans-serif, Arial;
+	color: #757575;
+	margin-top: -35px;
+	margin-bottom: 38px;
+}
+.entry-content .page-last-modified {
+	font-size: 17.5px;
+	font-family: sans-serif,Arial;
+	margin: 70px 0 -23px;
+	text-align: right;
+}
+body.infolettre .page-last-modified,
+body.contact .page-last-modified {
+	display: none;
+}
+
+/* 2020-06-08T1044+0200 */
+h2.inter {
+	margin-bottom: 20px;
+	margin-left: 0;
+	text-indent: 0;
+	font-size: 24px;
+	font-weight: bold;
+	font-style: italic;
+}
+td.footnote_plugin_text a,
+article p a {
+	color: #000099;
+}
+.tribute p {
+	text-align: center;
+}
+
+/*2020-06-13T0201+0200*/
+kbd {
+	font-size: 100%;
+	font-family: Consolas, monospace;
+	letter-spacing: 0.5em;
+	margin-right: 2px;
+	border: 1px solid black;
+	border-radius: 3px;
+	box-shadow: 0 3px 3px 2px #cccccc;
+}
+kbd.mod,
+kbd.tog {
+	font-size: 90%;
+	font-family: Arial, sans-serif;
+	letter-spacing: 0;
+	padding: 0 5px 0 5px;
+	box-shadow: none;
+}
+kbd.mod {
+	background: linear-gradient(0deg,#cccccc,20%,#ffffff);	
+}
+kbd.tog,
+kbd.tog2 {
+	color: white;
+	background: black;
+}
+
+@media (max-device-width: 900px) {
+	body {
+		margin-right: 3%;
+		margin-left: 3%;
+	}
+	.att::before {
+		content: '⚠';
+		display: block;
+	}
+	.att::first-line {
+		margin-left: none;
+	}
+}
+/*for desktop screens only: */
+@media (min-device-width: 900px) {
+	#toc_container {
+		padding-left: 10%;
+	}
+	#toc_container.contracted {
+		/*padding-right: 10%;*/
+		padding: 10px 15px;
+	}
+	article p {
+		text-align: justify;
+	}
+	/*for hanging heading numbers: */
+	article,
+	#respond {
+		margin-left: 64px;
+	}
+	h2 {
+		text-indent: -38px;
+	}
+	h2.inter,
+	h2.nn {
+		text-indent: 0;
+	}
+	h3 {
+		text-indent: -55px;
+	}
+	h4 {
+		text-indent: -66px;
+	}
+	h5 {
+		text-indent: -77px;
+	}
+	h6 {
+		text-indent: -80px;
+	}
+	/*for prepended chapter numbers: */
+	body.adapter-les-contenus h2, body.construire-le-site h2, body.mettre-en-ligne h2 { text-indent: -61px; }
+	body.adapter-les-contenus h3, body.construire-le-site h3, body.mettre-en-ligne h3 { text-indent: -76px; }
+	body.adapter-les-contenus h4, body.construire-le-site h4, body.mettre-en-ligne h4 { text-indent: -85px; }
+	body.adapter-les-contenus h5, body.construire-le-site h5, body.mettre-en-ligne h5 { text-indent: -91px; }
+	body.adapter-les-contenus h6, body.construire-le-site h6, body.mettre-en-ligne h6 { text-indent: -94px; }
+}
+@media print {
+	.footnote_tooltip {
+		display: none;
+	}
+}
+
+/*2020-06-23T0613+0200*/
+.footnote_tooltip {
+	text-align: left;
+}
+.footnote_plugin_index {
+	width: 9px;
+	cursor: pointer;
+	color: #000099;
+}
+.footnote_plugin_text {
+	width: 99%;
+}
+
+.wp-block-quote cite {
+	font-style: normal;
+	font-size: 20px;
+	color: black;
+	margin-left: 6%;
+}
+.wp-block-quote p {
+	padding-bottom: 7px;
+}
+.wp-block-quote {
+	background: white;
+	border-top: 1px solid #66FF66;
+	border-right: 1px solid #66FF66;
+	border-bottom: 1px solid #66FF66;
+}
+
+h2, h3, h4, h5, h6 {
+	margin-top: 34px;
+	margin-bottom: 20px;
+	position: relative;
+}
+h2 {
+	font-size: 34px;
+	margin: 45px 0 30px;
+	font-weight: 800;
+}
+.entry-content p {
+	margin-bottom: 16px;
+}
+pre code {
+	display: block;
+	line-height: 1.5em;
+	white-space: pre;
+	overflow: auto;
+}
+pre.wrap code {
+	white-space: pre-wrap;
+}
+/*2020-09-02T1429+0200*/
+/* for TOC+ */
+div.offset-anchor {
+	position: absolute;
+	top: -15vh;
+	/*border: 5px solid blue;*/
+}
+.heading-link,   /*heading text*/
+.toc-backlink {  /*heading number*/
+	color: inherit;
+	text-decoration: none;
+}
+.heading-link:hover,
+.toc-backlink:hover {
+	text-decoration: underline;
+}
+
+.toc-backlink {
+	opacity: .2;
+	transition: opacity 10s;
+}
+.toc-backlink:hover {
+	opacity: 1;
+	transition: none;
+}
+.toc-info {  /*hint about using the backlinks*/
+	float: right;
+	color: #3B88C3;  /*same as emoji U+2139 */
+	opacity: .4;
+	transition: opacity 10s;
+	font-style: italic;
+}
+.toc-info:hover {
+	opacity: 1;
+	transition: none;
+}
+#toc_container li a {  /*headings*/
+	color: #000000;
+}
+#toc_container li a span {  /*heading numbers*/
+	color: #00000088;
+	transition: color 10s;
+}
+#toc_container li a:hover span {
+	color: #000000;
+	transition: none;
+}
+/*2020-09-10T2108+0200*/
+.continue {
+	font-style: italic;
+	color: green;
+	text-decoration: underline;
+}
+.continue:hover {
+	color: blue;
+}
+
+/* Courtesy John Regan <https://johnregan3.wordpress.com/2018/12/19/how-to-add-full-width-images-in-gutenberg/> */
+.alignwide {
+  /* Set these margins to work with your own theme. */
+  margin-left: -80px;
+  margin-right: -80px;
+  max-width: 100vw;
+}
+.alignfull {
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+  max-width: 100vw;
+}
+.alignfull img {
+  width: 100vw;
+}
